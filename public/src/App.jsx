@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import MovieList from './components/MovieList'
-import AppMovie from './components/AddMovie'
+import AddMovie from './components/AddMovie'
 import EditMovie from './components/EditMovie'
 import Navbar from './components/Navbar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -21,8 +21,6 @@ function App() {
           <Route path='/EditMovie' element={<EditMovie/>} exact></Route>
         </Routes>
       </BrowserRouter>
-
-
     </div>
   )
 }
