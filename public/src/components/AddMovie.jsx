@@ -1,15 +1,22 @@
+
 import { text } from 'body-parser'
-import React from 'react'
+import React, { useState } from 'react'
+
 
 
 const addMovie = () => {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  
   function agregar() {
     
   }
 
   return (
     <div>
-      <h1 className='font-Quicksand font-bold text-xl md:text-3xl text-lightYellow text-center py-5 md:p-10'>Lista de películas</h1>
+      <h1 className='font-Quicksand font-bold text-xl md:text-3xl text-lightYellow text-center py-5 md:p-10'>Agregar nueva película</h1>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <section>
           <form className='grid gap-2 bg-darkRed/60 w-11/12 m-auto py-2.5 md:py-5 rounded-md text-center'>
