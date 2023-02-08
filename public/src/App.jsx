@@ -3,6 +3,7 @@ import './App.css'
 import MovieList from './components/MovieList'
 import AddMovie from './components/AddMovie'
 import EditMovie from './components/EditMovie'
+import Navbar from './components/Navbar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
@@ -12,7 +13,7 @@ function App() {
   return (
 
     <div className="App h-screen bg-cover bg-default">
-
+      <Navbar/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MovieList/>} exact></Route>
