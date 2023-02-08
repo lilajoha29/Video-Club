@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import './App.css'
 import MovieList from './components/MovieList'
-import AddMovie from './components/addMovie'
+import AppMovie from './components/AddMovie'
 import EditMovie from './components/EditMovie'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+
     <div className="App h-screen bg-cover bg-default">
 
       <BrowserRouter>
@@ -18,6 +20,7 @@ function App() {
           <Route path='/EditMovie' element={<EditMovie/>} exact></Route>
         </Routes>
       </BrowserRouter>
+
 
     </div>
   )
