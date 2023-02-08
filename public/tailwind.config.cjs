@@ -9,14 +9,21 @@ module.exports = {
       colors: {
         'lightRed': '#8F3D38',
         'darkRed': '#56070C',
-        'darkBlue': '#192444'
+        'lightBlue': '#192444',
+        'darkBlue': '#0D1222',
+        'lightYellow': '#FBE16E',
+        'darkYellow': '#F4BC5F'
       },
       fontFamily: {
-        'Quicksand': ['"Quicksand"','sans-serif']
+        Quicksand: "'Quicksand','sans-serif'"
       },
       backgroundImage: {
         'default': "url('./src/assets/BackDesktop.svg')"
       }
+    },
+    screens: {
+      'md': '768px',
+      'lg': '860px'
     }
   },
   plugins: [],
