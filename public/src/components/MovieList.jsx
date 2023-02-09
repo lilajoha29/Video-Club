@@ -93,12 +93,11 @@ const movieList = () => {
             </div>
           </div>
           <div className="w-9/12 m-auto py-5 flex justify-around">
-
-              <a href="/EditMovie">
+            <a href="/EditMovie">
               <button className="font-Quicksand font-semibold md:text-xl px-4 md:px-8 py-0.5 md:py-1 text-center text-white hover:text-darkRed bg-lightBlue hover:bg-lightYellow rounded-md border-2 border-darkBlue hover:border-darkYellow">
                 EDITAR
               </button>
-              </a>
+            </a>
 
             <button className="font-Quicksand font-semibold md:text-xl px-4 md:px-8 py-0.5 text-center text-white hover:text-darkRed bg-lightBlue hover:bg-lightYellow rounded-md border-2 border-darkBlue hover:border-darkYellow">
               ELIMINAR

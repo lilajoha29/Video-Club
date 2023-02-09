@@ -6,6 +6,12 @@ const archivoBD = require('./connection')
 
 const movieRoute = require('./Routes/movies')
 
+
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: 'true'}))
+
+
 app.use('/api/movie', movieRoute)
 
 app.get('/', (req, res) => {
