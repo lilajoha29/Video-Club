@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <div>
-        <div className='bg-lightBlue'>
+        <div className='bg-lightBlue text-center'>
           <h3>Desarrollado por:</h3>
           <a href="https://github.com/lilajoha29">lilajoha29</a>
           <a href="https://github.com/MariaHerrera03">MariaHerrera03</a>
