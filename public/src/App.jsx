@@ -4,6 +4,7 @@ import MovieList from './components/MovieList'
 import AddMovie from './components/AddMovie'
 import EditMovie from './components/EditMovie'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
