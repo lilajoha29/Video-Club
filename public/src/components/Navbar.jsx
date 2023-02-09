@@ -11,7 +11,7 @@ const Navbar = () => {
       </a>
       <a href="/AddMovie">
         <button>
-          <h1 className='m-2 text-2xl'>Agregar película +</h1>
+          <h1 className='m-1 text-2xl'>Agregar película +</h1>
         </button>
       </a>
 

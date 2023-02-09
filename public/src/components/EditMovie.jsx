@@ -1,13 +1,51 @@
-import React from "react";
+import axios from "axios";
+import React, {useEffect, useState} from "react";
+import { useParams } from "react-router-dom";
 
 const editMovie = () => {
+
+  const params = useParams()
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
+  useEffect(() => {
+    axios.post('/api/movie/getdatamovie', {idMovie: params.idMovie}).then(res=>{
+      console.log(res.data[0])
+      const datamovie = res.data[0]
+      setName(datamovie.name)
+      setEmail(datamovie.email)
+      setPhone(datamovie.phone)
+    })
+  }, []);
+
+  function editMovie(){
+    const updatemovie={
+      Title: Title,
+      Year: Year,
+      Duration: Duration,
+      Language: Language,
+      Launch: Launch,
+      Country: Country,
+      idMovie: params.idMovie
+    }
+
+    axios.post('/api/movie/updatemovie', updatemovie)
+    .then(res => {
+      console.log(res.data)
+      alert(res.data)
+    })
+    .then(err=>{console.log(err)})
+  }
+
   return (
     <div>
       <h1 className="font-Quicksand font-bold text-xl md:text-3xl text-lightYellow text-center pt-5 md:pt-10">
         Editar película
       </h1>
       <h1 className="font-Quicksand font-regular text-xl md:text-3xl text-lightYellow text-center pb-5 md:pb-10">
-        ID: 123456789
+        ID: {params.idMovie}
       </h1>
       <div className="grid grid-cols-1 ">
         <section>
@@ -86,7 +124,7 @@ const editMovie = () => {
             </div>
           </div>
           <div className="w-9/12 m-auto py-5 flex justify-around">
-            <button className="font-Quicksand font-semibold md:text-xl px-4 md:px-8 py-0.5 md:py-1 text-center text-white hover:text-darkRed bg-lightBlue hover:bg-lightYellow rounded-md border-2 border-darkBlue hover:border-darkYellow">
+            <button onClick={editMovie} className="font-Quicksand font-semibold md:text-xl px-4 md:px-8 py-0.5 md:py-1 text-center text-white hover:text-darkRed bg-lightBlue hover:bg-lightYellow rounded-md border-2 border-darkBlue hover:border-darkYellow">
               GUARDAR
             </button>
           </div>
