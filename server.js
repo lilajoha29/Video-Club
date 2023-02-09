@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = 3000;
 
 const archivoBD = require('./connection')
 
@@ -18,6 +17,6 @@ app.get('/', (req, res) => {
   res.end('Bienvenido al servidor Backend Node.js')
 })
 
-app.listen(port, () => {
+app.listen(5000, () => {
   console.log('El servidor esta corriendo correctamente')
 })

@@ -1,7 +1,7 @@
 import { text } from "body-parser";
 import React, { useState } from "react";
-import uniquid from 'uniqid'
-import axios from "axios";
+import uniqid from 'uniqid'
+import axios from 'axios';
 
 const addMovie = () => {
 
@@ -21,11 +21,11 @@ const addMovie = () => {
       Language: Language,
       Launch: Launch,
       Country: Country,
-      idMovie: uniquid()
+      idMovie: uniqid()
     }
-    console.log(movie);
+    console.log(movies);
 
-    axios.post('/api/movie/addMovie', movies)
+    axios.post('/api/movie/addNewMovie', movies)
     .then(res => {
         alert(res.data)
     })
@@ -42,42 +42,42 @@ const addMovie = () => {
         <section>
           <form className="grid gap-2 bg-darkRed/60 w-11/12 m-auto py-2.5 md:py-5 rounded-md text-center">
             <input
-              type={text}
+              type="text"
               placeholder="Escriba el nombre de la película"
               value={Title}
               onChange={(e) => {setTitle(e.target.value)}}
               className="text-center font-Quicksand font-normal text-sm md:text-xl my-auto flex justify-center bg-white mx-2.5 md:mx-5 rounded-md border-2 border-lightBlue text-lightBlue"
             ></input>
             <input
-              type={text}
+              type="text"
               placeholder="Escriba el año de lanzamiento de la película"
               value={Year}
               onChange={(e) => { setYear(e.target.value) }}
               className="text-center font-Quicksand font-normal text-sm md:text-xl my-auto flex justify-center bg-white mx-2.5 md:mx-5 rounded-md border-2 border-lightBlue text-lightBlue"
             ></input>
             <input
-              type={text}
+              type="text"
               placeholder="Escriba la duración de la película"
               value={Duration}
               onChange={(e) => { setDuration(e.target.value) }}
               className="text-center font-Quicksand font-normal text-sm md:text-xl my-auto flex justify-center bg-white mx-2.5 md:mx-5 rounded-md border-2 border-lightBlue text-lightBlue"
             ></input>
             <input
-              type={text}
+              type="text"
               placeholder="Escriba el idioma original de la película"
               value={Language}
               onChange={(e) => { setLanguage(e.target.value) }}
               className="text-center font-Quicksand font-normal text-sm md:text-xl my-auto flex justify-center bg-white mx-2.5 md:mx-5 rounded-md border-2 border-lightBlue text-lightBlue"
             ></input>
             <input
-              type={text}
+              type="text"
               placeholder="Escriba la fecha de lanzamiento (dd/mm/aaaa)"
               value={Launch}
               onChange={(e) => { setLaunch(e.target.value) }}
               className="text-center font-Quicksand font-normal text-sm md:text-xl my-auto flex justify-center bg-white mx-2.5 md:mx-5 rounded-md border-2 border-lightBlue text-lightBlue"
             ></input>
             <input
-              type={text}
+              type="text"
               placeholder="Escriba el país de origen de la película"
               value={Country}
               onChange={(e) => { setCountry(e.target.value) }}

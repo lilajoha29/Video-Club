@@ -22,7 +22,7 @@ router.get('/test', (req, res) => {
 }); */
 
 //Request used to add Movies
-router.post('/api/addNewMovie', (req, res) => {
+router.post('/addNewMovie', (req, res) => {
   const newMovie = new movieModel({
     idMovie: req.body.idMovie,
     Title: req.body.title,
@@ -41,7 +41,7 @@ router.post('/api/addNewMovie', (req, res) => {
   })
 })
 //Request used to get all Movies
-router.get('/api/getMovie', (req, res) => {
+router.get('/getMovie', (req, res) => {
   movieModel.find({}, function(docs, err){
     if(!err){
       res.send('Película agregada Correctamente')
