@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const archivoBD = require('./conection')
+const archivoBD = require('./connection')
+
+const movieRoute = require('./Routes/movies')
+
+app.use('/api/movie', movieRoute)
 
 app.get('/', (req, res) => {
   res.end('Bienvenido al servidor Backend Node.js')
