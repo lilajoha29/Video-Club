@@ -21,6 +21,7 @@ function App() {
           <Route path='/EditMovie' element={<EditMovie/>} exact></Route>
         </Routes>
       </BrowserRouter>
+
     </div>
   )
 }
