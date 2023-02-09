@@ -25,7 +25,7 @@ const addMovie = () => {
     }
     console.log(movies);
 
-    axios.post('/api/movie/addNewMovie', movies)
+    axios.post('http://localhost:5000/api/movie/addNewMovie', movies)
     .then(res => {
         alert(res.data)
     })

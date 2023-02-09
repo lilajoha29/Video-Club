@@ -2,16 +2,16 @@ const express = require('express');
 const router = express.Router();
 
 const mongoose = require('mongoose');
-const schema = mongoose.Schema;
+const Eschemas = mongoose.Schema;
 
-const schemaMovie = new schema({
+const schemaMovie = new Eschemas({
   idMovie: String,
   Title: String,
-  Year: Date,
+  Year: Number,
   Duration: Number,
   Language: String,
-  Launch: Date,
-  Country: String,
+  Launch: Number,
+  Country: String
 });
 const movieModel = mongoose.model('movie', schemaMovie);
 module.exports = router;
